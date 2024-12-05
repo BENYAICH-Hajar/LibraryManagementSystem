@@ -23,12 +23,32 @@ class Library:
         return book_list
     def load_books(self, file_path: str):
     
-
-
-
 class Student:
     def __init__(self, name: str):
         self.name = name
         self.borrowed_books = []
     def borrow_book(self, book_title: str, library: Library):
+         if len(self.borrow_book) >= 3:
+            print(f"{self.name} can't emprate more than 3 books.")
+            return
+        for book in library.books:
+            if book.title == title:
+                if title.disponible:
+                    book.disponible = False
+                    self.borrowed_book.append(book)
+                    print(f"{self.name} emprunte the book '{title}'.")
+                    return
+                else:
+                    print(f"the book '{title}'is borrowed.")
+                    return
+        print(f"the book '{title}' isn't at library.")
+    def rendre_livre(self, title, library):
+        for book in self.borrowed_book:
+            if book.title == title:
+                book.disponible = True
+                self.borrowed_book.remove(book)
+                print(f"{self.name}  '{title}'.")
+                return
+
+
         
